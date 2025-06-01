@@ -3,33 +3,39 @@ package no_22857;
 // class명 변경 후 제출
 public class Main_3 {
 	public static void main(String[] args) {
-		int len 			= readInt();
-		int delCount 	= readInt();
+		int N = readInt();
+		int K = readInt();
 		
-		boolean[] isEven = new boolean[len];
-		for(int i = 0; i < len; i++) {
+		boolean[] isEven = new boolean[N];
+		for(int i = 0; i < N; i++) {
 			isEven[i] = (readInt() % 2 == 0);
 		}
 		
-		int start 			= 0;
-		int end 				= 0;
-		int odd 				= 0;
-		int maxEvenLen 	= 0;
+		int start = 0, end = 0;
+		int oddCount = 0;
+		int maxLen = 0;
 		
-		while(end < len) {
-			if(isEven[end++]) { // 마지막 자리가 짝수이면 한칸 이동
-				if(end == len) { // 마지막이 끝까지 가고 짝수일 경우
-					
+		while(end < N) {
+			
+			if(isEven[end]) {
+				end++;
+			}else if(oddCount < K) {
+				oddCount++;
+				end++;
+			}else {
+				if(!isEven[start]) {
+					oddCount--;
 				}
-			}else if(odd < delCount) { // 마지막이 홀수인데 홀수의 개수가 삭제가능한 수보다 적을 경우
-				odd++;
-			}else { // 마지막이 홀수이고, 삭제가능한 홀수가 없을 경우
-				end--; // 우선 end를 짝수범위로 가져오고
-			} 
+				start++;
+			}
+			
+			maxLen = Math.max(maxLen, end-start-oddCount);
+			
 		}
 		
-		System.out.println(maxEvenLen);
+		System.out.println(maxLen);
 	}
+	
 	static int readInt() {
 		int c, n = 0;
 		try {
