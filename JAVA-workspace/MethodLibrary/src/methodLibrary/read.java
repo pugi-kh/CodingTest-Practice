@@ -1,6 +1,7 @@
 package methodLibrary;
 
-public class read {
+public class Read {
+	
 	static int readUnsigned() {
 		int c, n = 0;
 		try {
@@ -30,4 +31,5 @@ public class read {
 		} catch (Exception e){}
 		return plus ? n : -n;
 	}
+
 }
