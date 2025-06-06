@@ -14,5 +14,7 @@ git status
 sleep 1
 git commit -m "$date"
 git push origin main
-git status
+
+git log -n 10 --oneline
+
 read
