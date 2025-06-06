@@ -8,8 +8,11 @@ sleep 3
 date=$(date +%Y_%m_%d)
 
 git add .
+sleep 1
 git add .
 git status
-sleep 3
+sleep 1
 git commit -m "$date"
 git push origin main
+git status
+read

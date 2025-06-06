@@ -1,6 +1,6 @@
 package methodLibrary;
 
-public class Read {
+class Read {
 	
 	static int readUnsigned() {
 		int c, n = 0;
