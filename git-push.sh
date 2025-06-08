@@ -11,7 +11,6 @@ git add .
 sleep 1
 git add .
 git status
-sleep 1
 git commit -m "$date"
 git push origin main
 
