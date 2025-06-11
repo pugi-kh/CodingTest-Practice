@@ -1,4 +1,4 @@
-package no_1260;
+package no_1260_추후에_다시_풀이계획_fail;
 
 import java.util.Collection;
 import java.util.HashSet;
