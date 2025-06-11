@@ -2,19 +2,24 @@
 
 git config --global user.name kihoonkwon
 git config --global user.email jhgfjhgfjhgf96@gmail.com
-echo "git push run in 3sec"
-sleep 3
+echo "git push run? [y/n]"
 
-date=$(date +%Y_%m_%d)
+read answer
 
-git add .
-sleep 1
-git add .
-git status
-sleep 1
-git commit -m "$date"
-git push origin main
+if [ "$answer" = "y" ]; then
+  git add .
+  sleep 1
+  git add .
+  git status
 
-git log -n 10 --oneline
+  date=$(date +%Y_%m_%d)
+  
+  git commit -m "$date"
+  git push origin main
+
+  git log -n 10 --oneline
+else
+  echo "git push canceled"
+fi
 
 read
