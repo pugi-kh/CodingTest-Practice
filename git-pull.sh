@@ -8,8 +8,14 @@ read answer
 
 if [[ "$answer" == "y" ]]; then
     git pull
-    read
+    echo ""
+    echo "============="
+    echo "git pull completed"
+    echo "============="
 else
+    echo ""
+    echo "============="
     echo "git pull canceled"
-    read
+    echo "============="
 fi
+read

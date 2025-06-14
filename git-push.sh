@@ -18,7 +18,10 @@ if [[ "$answer" == "y" ]]; then
   
   git log -n 10 --oneline
 else
+  echo ""
+  echo "============="
   echo "git push canceled"
+  echo "============="
 fi
 
 read
