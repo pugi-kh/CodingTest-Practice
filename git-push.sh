@@ -17,6 +17,11 @@ if [[ "$answer" == "y" ]]; then
   git push origin main
   
   git log -n 10 --oneline
+
+  echo ""
+  echo "============="
+  echo "git push complete"
+  echo "============="
 else
   echo ""
   echo "============="
@@ -24,4 +29,4 @@ else
   echo "============="
 fi
 
-read
+sleep1

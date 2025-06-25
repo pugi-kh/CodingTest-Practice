@@ -18,4 +18,4 @@ else
     echo "git pull canceled"
     echo "============="
 fi
-read
+sleep 2
