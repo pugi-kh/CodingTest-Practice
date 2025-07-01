@@ -1,29 +1,20 @@
 package no_1271;
 
-public class Main {
-	public static void main(String[] args) {
-		int totalMoney = read();
-		int creatures = read();
-		
-		System.out.println(totalMoney / creatures);
-		System.out.println(totalMoney % creatures);
-	}
-	
-	static int read() {
-		int c, n = 0;
-		boolean plus = true;
-		try {
-			while((c = System.in.read()) <= 32);
-			if(c == 45) { 
-				plus = false;
-				c = System.in.read();
-			}
-			n = c & 15;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.math.BigInteger;
+import java.util.StringTokenizer;
 
-			while((c = System.in.read()) > 32) {
-				n = (n << 3) + (n << 1) + (c & 15);
-			}
-		} catch (Exception e){}
-		return plus ? n : -n;
+public class Main {
+	public static void main(String[] args) throws IOException {
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		StringTokenizer st = new StringTokenizer(br.readLine());
+		
+		BigInteger totalMoney = new BigInteger(st.nextToken());
+		BigInteger creatures = new BigInteger(st.nextToken());
+		
+		System.out.println(totalMoney.divide(creatures));
+		System.out.println(totalMoney.remainder(creatures));
 	}
 }
