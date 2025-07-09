@@ -1,10 +1,9 @@
 package no_11651;
 
-import java.io.*;
 import java.util.*;
 
 public class Main {
-	public static void main(String[] args) throws IOException {
+	public static void main(String[] args) {
 		
 		int n = read();
 		int[][] node = new int[n][2];
@@ -14,6 +13,17 @@ public class Main {
 			node[i][1] = read();
 		}
 		
+//		Arrays.sort(node, (a, b) -> (
+//				a[1] != b[1] ? Integer.compare(a[1], b[1]) : Integer.compare(a[0], b[0])
+//			)
+//		);
+		Arrays.sort(node, (a, b) -> (a[1] != b[1] ? a[1] - b[1] : a[0] - b[0]));
+		
+		StringBuilder stb = new StringBuilder();
+		for(int i = 0; i < n; i++) {
+			stb.append(node[i][0]).append(" ").append(node[i][1]).append("\n");
+		}
+		System.out.println(stb);
 		
 	}
 	

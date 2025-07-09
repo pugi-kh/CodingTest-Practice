@@ -19,7 +19,7 @@ class Read {
 		boolean plus = true;
 		try {
 			while((c = System.in.read()) <= 32);
-			if(c == 45) { 
+			if(c == '-') { 
 				plus = false;
 				c = System.in.read();
 			}
@@ -33,3 +33,5 @@ class Read {
 	}
 
 }
+
+// while (!Character.isDigit(c = System.in.read()) && c != '-');
