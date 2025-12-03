@@ -29,4 +29,4 @@ else
   echo "============="
 fi
 
-sleep1
+read
