@@ -10,6 +10,7 @@ public class Main {
 		int B = scan.nextInt();
 		
 		System.out.println((double)A/B);
+		scan.close();
 		
 	}
 }

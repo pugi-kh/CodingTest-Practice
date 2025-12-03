@@ -11,6 +11,7 @@ public class Main {
 		int B = scan.nextInt();
 		
 		System.out.println(A+B);
+		scan.close();
 	}
 
 }
